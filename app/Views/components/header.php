@@ -9,24 +9,24 @@
     <title><?= SITE_NAME ?> | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="">
-<nav class="bg-white shadow-lg">
+<body class="bg-[#323437]">
+<nav class="text-white shadow-lg">
     <div class="container mx-auto flex justify-between items-center py-4">
         <div class="flex">
             <strong class="">PAROLY</strong>
         </div>
         <div class="nav-links">
             <ul class="nav-list flex gap-4">
-                <li class="nav-item hover:bg-[#FFFF64] hover:shadow-lg py-2 px-4  rounded-3xl">
+                <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
                     <a href="#" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item hover:bg-[#FFFF64] hover:shadow-lg py-2 px-4  rounded-3xl">
+                <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
                     <a href="#" class="nav-link">About</a>
                 </li>
-                <li class="nav-item hover:bg-[#FFFF64] hover:shadow-lg py-2 px-4  rounded-3xl">
+                <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
                     <a href="#" class="nav-link">Artists</a>
                 </li>
-                <li class="nav-item hover:bg-[#FFFF64] hover:shadow-lg py-2 px-4  rounded-3xl">
+                <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>

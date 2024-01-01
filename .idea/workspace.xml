@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="" />
+    <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/Album.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Music.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Playlist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Reaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Style.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Views/Home/about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/Home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/Home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/components/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +39,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
@@ -29,6 +52,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2aGFeMMWg9lczq4ZDxDNQy3AM5h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,13 +65,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "aymane",
+    "last_opened_file_path": "C:/xampp/htdocs/PAROLY/Public/assets/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "project.scopes",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -54,11 +82,10 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PAROLY\Public\assets\img" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -71,6 +98,8 @@
       <workItem from="1703937104147" duration="517000" />
       <workItem from="1703937641681" duration="10114000" />
       <workItem from="1703955940075" duration="2557000" />
+      <workItem from="1704030831091" duration="12197000" />
+      <workItem from="1704057257578" duration="13884000" />
     </task>
     <servers />
   </component>
