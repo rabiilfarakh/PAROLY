@@ -5,7 +5,7 @@ use App\Core\Model;
 abstract class User extends Model
 {
     private $userId;
-    public $name;
+    private $name;
     private $username;
     private $email;
     private $password;
