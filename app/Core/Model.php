@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace App\Core;
 
 use App\Core\Database;
 use PDOException;
@@ -17,7 +17,6 @@ abstract class Model
         $this->dbh = $this->dbh->connect();
         $this->tableName = $tableName;
     }
-
     public function __set($property, $value)
     {
         $this->$property = $value;
@@ -50,14 +49,13 @@ abstract class Model
             die("error in finding by a column" . $e->getMessage());
         }
     }
-    protected function add($columnsArray, $values){
+    protected function add($data){
         try{
-            $placeholders = implode(',', array_fill(0, count($columnsArray), '?'));
-            if (count($columnsArray) !== count($values)) {
-                die("Number of columns and values don't match");
-            }
-            $stmt = $this->dbh->prepare("INSERT INTO {$this->tableName} ({$columnsArray}) values ($placeholders)");
-            $stmt->execute($values);
+            $columns = implode(',', array_keys($data));
+            $placeholders = implode(',', array_fill(0, count($data), '?'));
+
+            $stmt = $this->dbh->prepare("INSERT INTO {$this->tableName} ({$columns}) values ($placeholders)");
+            $stmt->execute(array_values($data));
         }catch(PDOException $e){
             die("error in selecting" . $e->getMessage());
         }
