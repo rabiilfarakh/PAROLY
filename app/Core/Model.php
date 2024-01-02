@@ -62,7 +62,7 @@ abstract class Model
     }
     protected function update($columnsArray, $values, $conditionColumn, $conditionValue){
         try{
-            $placeholders = array_map(function ($column){ return '$column=?'; },$columnsArray);
+            $placeholders = array_map(function ($column){ return "$column=?"; },$columnsArray);
             $placeholders = implode (',', $placeholders);
 
             if (count($columnsArray) !== count($values)) {
