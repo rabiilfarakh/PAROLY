@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Album.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Artist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Music.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Playlist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Reaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Report.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +95,8 @@
       <workItem from="1703955940075" duration="2557000" />
       <workItem from="1704030831091" duration="12197000" />
       <workItem from="1704057257578" duration="14024000" />
-      <workItem from="1704183781145" duration="15024000" />
+      <workItem from="1704183781145" duration="17464000" />
+      <workItem from="1704221083981" duration="2544000" />
     </task>
     <servers />
   </component>

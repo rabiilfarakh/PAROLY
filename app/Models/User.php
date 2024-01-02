@@ -4,12 +4,13 @@ namespace App\Models;
 use App\Core\Model;
 abstract class User extends Model
 {
-    public $name;
     private $userId;
-    private $fullName;
+    public $name;
+    private $username;
     private $email;
     private $password;
     private $profileImage;
+    private $token;
     public function Login($email, $password){
         $result = $this->findByColumnName("email", $email);
         if($result > 0){
