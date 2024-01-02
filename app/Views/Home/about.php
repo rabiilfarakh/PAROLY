@@ -1,1 +1,2 @@
-hello about page
+<?php
+print_r($data);

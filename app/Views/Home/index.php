@@ -1,11 +1,11 @@
 <?php require_once APP_ROOT . '/Views/components/header.php'; ?>
 
 <section class="container mx-auto text-white">
-    <div class="popular flex items-start justify-between mt-20">
+    <div class="popular flex items-start justify-between md:items-start md:justify-center flex-wrap mt-20">
         <div class="container mx-auto w-[50%]">
             <div class="flex items-center gap-8">
                 <b>NEWS</b>
-                <div class="h-px  w-[70%] bg-white"></div>
+                <div class="h-px w-[70%] bg-white"></div>
             </div>
             <div class="primary-title">
                 <h1 class="font-medium text-4xl tracking-widest my-4 hover:underline ">The Top Lyrics Of 2023 According
@@ -15,7 +15,7 @@
                 </p>
             </div>
         </div>
-        <div class="img-container">
+        <div class="img-container md:mt-8">
             <img class="max-h-[60vh] max-w-full rounded-xl" src="./assets/img/toto.jpg" alt="">
         </div>
     </div>
@@ -74,7 +74,6 @@
                 <td class="px-6 py-2">Lose Yourself <span>Lyrics</span></td>
                 <td class="px-6 py-2">Eminem</td>
                 <td class="px-6 py-2">890K</td>
-
             </tr>
             <tr class="border-b-[1px]">
                 <td class="px-6 py-2">1</td>
