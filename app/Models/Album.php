@@ -1,19 +1,36 @@
 <?php
 
-namespace App\Models;
-use App\Models\Artist;
-use App\Core\Model;
-
-class Album extends Model
-{
+class Album {
     private $albumId;
     private $albumName;
-    private Artist $artist;
-    public function __set($property, $value){
-        $this->$property = $value;
-    }
-    public function __get ($property){
-        return $this->$property;
+    private $artistId;
+    private $albumImage;
+
+    private $db;
+
+    public function __construct() {
+        $this->db = DATABASE::getconnection();
     }
 
+    public function __get ($param) {
+        return $this->$param;
+    }
+
+    public function __set($param,$value){
+        $this->$param = $value;
+    }
+
+    public function insertAlbum() {
+        $album = $this->albumName;
+        $image = $this->albumImage;
+        $insert = $this->db->prepare("INSERT INTO album (albumName,albumImage) VALUES (:name,:image)");
+        $insert->bindValue(':name' , $album , PDO::PARAM_STR);
+        $insert->bindValue(':image' , $image , PDO::PARAM_LOB);
+        $insert->execute();
+    }
+
+    public function lastInsertedId() {
+        return $this->db->lastInsertId();
+    }
+    
 }

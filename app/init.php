@@ -1,6 +1,7 @@
 <?php
-require_once '../vendor/autoload.php';
-use App\Core\App;
-use App\Core\Database;
 
+require_once 'core/App.php';
+require_once 'core/Controller.php';
+require_once 'config.php';
 $app = new App;
+
