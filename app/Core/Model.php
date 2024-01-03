@@ -8,7 +8,7 @@ use PDOException;
 abstract class Model
 {
     private $tableName;
-    private $columns = [];
+    private $columns = ["*"];
     private $dbh;
 
     public function __construct($tableName)
@@ -41,7 +41,8 @@ abstract class Model
     {
         try {
             $columns = implode(',', $this->columns);
-            $stmt = $this->dbh->prepare("SELECT {$columns} from {$this->tableName} where {$columnName} = :value");
+            $query = "SELECT {$columns} FROM {$this->tableName} WHERE {$columnName} = :value";
+            $stmt = $this->dbh->prepare($query);
             $stmt->bindParam(':value', $value);
             $stmt->execute();
             return $stmt->fetchAll();

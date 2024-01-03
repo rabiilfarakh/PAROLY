@@ -13,7 +13,7 @@ class Database
     private $dbh;
     private function __construct()
     {
-        $dsn = "mysql:" . DB_HOST . ";dbname=" . DB_NAME;
+        $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbname;
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
