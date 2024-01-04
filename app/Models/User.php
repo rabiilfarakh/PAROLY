@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Core\Model;
+use App\Helpers\Functions;
 abstract class User extends Model
 {
     private $userId;
