@@ -56,7 +56,7 @@
 
 <section class="top-songs container mx-auto mb-64">
     <div class="section-header flex justify-between">
-    <h3 class="title text-5xl font-bold text-white">Top 2024 Songs</h3>
+    <h3 class="title text-5xl font-bold text-white">Top 4 Songs</h3>
         <select name="options" id="options" class="bg-[#323437] border border-[#E2B714] text-white text-sm rounded-lg focus:ring-[#E2B714] focus:border-[#E2B714] block px-4">
             <option class="" value="songs">Songs</option>
             <option class="" value="playlists">Top Playlists</option>
@@ -64,7 +64,7 @@
         </select>
     </div>
     <div class="relative overflow-x-auto text-white">
-        <table class="w-full text-left">
+        <table class="w-full text-left mt-20">
             <tbody>
             <tr class="border-b-[1px]">
                 <td class="px-6 py-2">1</td>
@@ -83,9 +83,25 @@
                 <td class="px-6 py-2">Lose Yourself <span>Lyrics</span></td>
                 <td class="px-6 py-2">Eminem</td>
                 <td class="px-6 py-2">890K</td>
-
+             
             </tr>
+            <tr class="border-b-[1px]">
+                <td class="px-6 py-2">1</td>
+                <td class="px-6 py-2">
+                    <img class="w-20 h-20" src="./assets/img/artist4.jpg" alt="">
+                </td>
+                <td class="px-6 py-2">Lose Yourself <span>Lyrics</span></td>
+                <td class="px-6 py-2">Eminem</td>
+                <td class="px-6 py-2">890K</td>
             </tbody>
+            <tr class="border-b-[1px]">
+                <td class="px-6 py-2">1</td>
+                <td class="px-6 py-2">
+                    <img class="w-20 h-20" src="./assets/img/artist4.jpg" alt="">
+                </td>
+                <td class="px-6 py-2">Lose Yourself <span>Lyrics</span></td>
+                <td class="px-6 py-2">Eminem</td>
+                <td class="px-6 py-2">890K</td>
         </table>
     </div>
 </section>
