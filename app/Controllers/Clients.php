@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Core\Controller;
+use App\Helpers\Functions;
 class Clients extends Controller
 {
     public function index(){
@@ -25,5 +26,8 @@ class Clients extends Controller
     }
     public function addplaylist(){
         $this->view('Client/addPlaylist');
+    }
+    public function profile(){
+        $this->view("Authentication/profile");
     }
 }

@@ -38,6 +38,7 @@
                     <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Clients/login">Login as Client</a>
                     <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Admins/login">Become an Artist</a>
                     <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Users/register">Register</a>
+                    <a class="hover:bg-[#E2B714] rounded-xl px-2" href="profile">Profile</a>
                 </div>
             </div>
         </div>
