@@ -11,6 +11,7 @@ abstract class User extends Model
     private $password;
     private $profileImage;
     private $token;
+    
     public function __set($property, $value){
         $this->$property = $value;
     }
