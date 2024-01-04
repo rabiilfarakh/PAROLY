@@ -22,3 +22,5 @@ class Artists extends Controller
         }
     }
 }
+
+
