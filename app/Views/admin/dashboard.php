@@ -13,8 +13,6 @@
 
 <body class="bg-gray-950">
 
-
-
    <nav class="fixed top-0 z-50 w-full bg-black ">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
          <div class="flex items-center justify-between">
@@ -664,10 +662,6 @@
 
          </div>
       </section>
-</body>
-
-</html>
-</div>
 <script>
    document.addEventListener('DOMContentLoaded', function() {
       const userMenuButton = document.querySelector('[data-dropdown-toggle="dropdown-user"]');
@@ -694,8 +688,3 @@
       });
    });
 </script>
-
-
-</body>
-
-</html>
