@@ -328,8 +328,9 @@ ALTER TABLE `reaction`
 --
 ALTER TABLE `reclamation`
   ADD CONSTRAINT `lyrics_ibfk_1` FOREIGN KEY (`lyricsId`) REFERENCES `lyrics` (`lyricsId`);
+
+ALTER TABLE playlist
+    ADD COLUMN playlistImage mediumblob;
+alter table playlist add column playlistDescription text;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

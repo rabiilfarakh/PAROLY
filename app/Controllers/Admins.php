@@ -41,8 +41,8 @@ class Admins extends Controller
     }
    
     public function addstyle(){
-
-        $style = new Style();
+        $style = $this->model("Style");
+//        $style = new Style();
         if($_SERVER["REQUEST_METHOD"] == "POST" ){
             $Name = $_POST["styleName"];
                        $newstyle = new Style();
