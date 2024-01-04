@@ -1,5 +1,5 @@
 <?php
-namespace Models;
+namespace App\Models;
 use App\Models\User;
 class Artist extends User
 {

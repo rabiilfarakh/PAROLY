@@ -12,7 +12,6 @@ class Controller
             die ("no model class defined with this name");
         }
     }
-
     public function view($view, $data = [])
     {
         require_once '../App/Views/' . $view . '.php';

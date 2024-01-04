@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Core\Model;
+use App\Helpers\Functions;
 abstract class User extends Model
 {
     private $userId;
@@ -21,7 +22,7 @@ abstract class User extends Model
         $result = $this->findByColumnName("email", $email);
         if(count($result) > 0){
             $user = $result[0];
-            if(password_verify($user["password"], $password)){
+            if($password === $user["password"]){
                 return $user;
             }else {
                 return 1;
