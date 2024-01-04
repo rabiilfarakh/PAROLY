@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Core\Controller;
 class Clients extends Controller
 {
+    public function index(){
+        $this->view('Client/index');
+    }
     public function login()
     {
         $this->view("Authentication/login");
@@ -19,5 +22,8 @@ class Clients extends Controller
             }
 
         }
+    }
+    public function addplaylist(){
+        $this->view('Client/addPlaylist');
     }
 }
