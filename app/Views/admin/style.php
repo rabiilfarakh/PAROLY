@@ -127,20 +127,29 @@
       </div>
    </aside>
    <div class="grid grid-cols-5  mt-24  md:ml-[22vw]">
-        <div class="bg-gray-300 h-12 w-[15vw] rounded-[15px] text-center py-2">Pop </div>
-        <div> <button type="button" id="adduser" class="bg-gray-300 h-12 w-[15vw] rounded-[15px] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" fill="black" viewBox="0 -960 960 960" width="24">
+      <?php 
+      foreach($data["style"] as $style):?>
+        <div class="bg-gray-300 h-12 w-[15vw] rounded-[15px] text-center py-2"><?= $style->styleName?> </div>
+        <?php endforeach;?>
+        <div> <div type="button" id="adduser" class="bg-gray-300 h-12 w-[15vw] rounded-[15px] flex justify-center items-center">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" fill="black" viewBox="0 -960 960 960" width="24">
                     <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
-                </svg>
-            </button>
+                </svg> -->
+                <form action="" method="post" class="flex">
+                <input type="text" name="styleName" id="first-name" value="" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Style name" required="">
+                <button type="submit" name="addStyle" class="text-white bg-orange-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Add 
+                    </button>
+                    </form>
+      </div>
         </div>
 
 
-        <div id="overlay" class="hidden h-screen w-full fixed top-0 left-0 bg-black/10 flex justify-center items-center">
+        <!-- <div id="overlay" class="hidden h-screen w-full fixed top-0 left-0 bg-black/10 flex justify-center items-center">
 
 
 
-            <form action="#" method="post" id="overlay-form" class="w-[50%] bg-white rounded-lg shadow dark:bg-gray-700">
+            <form action="" method="post" id="overlay-form" class="w-[50%] bg-white rounded-lg shadow dark:bg-gray-700">
                 <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
 
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Add Style</h3>
@@ -176,7 +185,7 @@
 
             </form>
 
-        </div>
+        </div> -->
 
 <script>function toggleOverlay() {
     var overlay = document.getElementById("overlay");
