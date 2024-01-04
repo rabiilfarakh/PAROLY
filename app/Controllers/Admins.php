@@ -20,4 +20,34 @@ class Admins extends Controller
             }
         }
     }
+    public function dashboard (){
+        $this->view("Admin/dashboard");
+    }
+    public function calendrier (){
+        $this->view("Admin/calendrier");
+    }
+    public function lyrics (){
+        $this->view("Admin/lyrics");
+    }
+    public function style (){
+        $this->view("Admin/style");
+        if(isset($_POST["addStyle"])){
+            unset($_POST["addStyle"]);
+          $styleObject = $this->model("Style");
+          die("here");
+          $styleObject->addStyle($_POST);
+          
+        }
+    }
+    public function Add(){
+        $this->view("Admin/addStyle");
+    }
+
+    public function reclamations (){
+        $this->view("Admin/reclamations");
+    }
+    public function playlist (){
+        $this->view("Admin/playlist");
+    }
+
 }
