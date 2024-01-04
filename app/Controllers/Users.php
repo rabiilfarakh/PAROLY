@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Core\Database;
+use PDO;
 use App\Helpers\Functions;
 use App\Helpers\InputsManager as Validator;
 
 class Users extends \App\Core\Controller
 {
+    private $db;
+
     public function register()
     {
         if (isset($_POST['register'])) {
@@ -30,5 +33,7 @@ class Users extends \App\Core\Controller
             $this->view("Authentication/register");
         }
     }
+
+   
 
 }
