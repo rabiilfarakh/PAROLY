@@ -20,4 +20,23 @@ class Admins extends Controller
             }
         }
     }
+    public function dashboard (){
+        $this->view("Admin/dashboard");
+    }
+    public function calendrier (){
+        $this->view("Admin/calendrier");
+    }
+    public function lyrics (){
+        $this->view("Admin/lyrics");
+    }
+    public function style (){
+        $this->view("Admin/style");
+    }
+    public function reclamations (){
+        $this->view("Admin/reclamations");
+    }
+    public function playlist (){
+        $this->view("Admin/playlist");
+    }
+
 }
