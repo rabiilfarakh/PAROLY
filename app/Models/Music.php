@@ -44,9 +44,11 @@ class Music {
     public function insertMusic () {
         $song = $this->songName;
         $id = $this->albumId;
-        $insert = $this->db->prepare('INSERT INTO music (songName,albumId) VALUE (:songName,:id)');
+        $style = $this->styleId;
+        $insert = $this->db->prepare('INSERT INTO music (songName,albumId,styleId) VALUE (:songName,:id,:style)');
         $insert->bindValue(':songName' , $song,PDO::PARAM_STR);
         $insert->bindValue(':id' , $id , PDO::PARAM_INT);
+        $insert->bindValue(':style' ,$style ,PDO::PARAM_INT);
         $insert->execute();
     }
 }

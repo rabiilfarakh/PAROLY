@@ -1,9 +1,11 @@
 <?php
 
 class ArtistModel {
-    private $name;
-    private $email;
-    private $password;
+    private $artistId;
+    private $artistName;
+    private $artistEmail;
+
+    private $artistPwd;
 
 
     public function __get($parametre){
@@ -13,5 +15,11 @@ class ArtistModel {
     public function __set($parametre, $value){
         $this->$parametre = $value;
     }
+
+    public function Get_All_From_Artist () {
+        $get = $this->db->query('SELECT * FROM artist');
+
+    }
+
 
 }

@@ -78,16 +78,27 @@ let i = 1;
 
 let songlist = [];
 
-songnamesend.addEventListener('click', () => {
-    let inputvalue = songnameinput.value.trim(); 
 
+document.querySelector('.styles').addEventListener('change', function() {
+    var selectedValue = this.value;
+});
+
+songnamesend.addEventListener('click', () => {
+    let inputvalue = songnameinput.value; 
+    let selectedstyle = document.querySelector('.styles').value;
+    let selectedStyleElement = document.querySelector('.styles');
+    let selectedStyleText = selectedStyleElement.options[selectedStyleElement.selectedIndex].textContent;
     if (inputvalue !== '') {
-        songlist.push(inputvalue);
+        let songData = {
+            songName: inputvalue,
+            style: selectedstyle
+        };
+        songlist.push(songData);
         let newRow = document.createElement('tr');
         newRow.innerHTML = `
             <th scope="row">${i}</th>
             <td>${inputvalue}</td>
-            <td></td>
+            <td>${selectedStyleText}</td>
         `;
 
         table.appendChild(newRow); 
@@ -111,7 +122,8 @@ sendlastthing.addEventListener('click', () => {
     formData.append('image', imageData); 
 
     for (let i = 0; i < songlist.length; i++) {
-        formData.append('songs[]', songlist[i]);
+        formData.append('songs[' + i + '][songName]', songlist[i].songName);
+        formData.append('songs[' + i + '][style]', songlist[i].style);
     }
 
     let xml = new XMLHttpRequest();
@@ -144,6 +156,7 @@ sendlastthing.addEventListener('click', () => {
 
     
 });
+
 
 
 

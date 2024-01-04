@@ -11,7 +11,8 @@
         /* Custom styles here */
         /* Ensure the drop-zone has a minimum height for display */
         .drop-zone {
-            min-height: 200px; /* Adjust the minimum height as needed */
+            min-height: 200px;
+            /* Adjust the minimum height as needed */
         }
     </style>
 </head>
@@ -48,38 +49,49 @@
         </div>
 
         <div class="ALLRIGHT position-relative text-white  w-100 bg-dark mt-md-0 mt-3" style="border-radius:10px;height:22.5rem">
-          <div class="top w-100 d-flex justify-content-between px-3">
-          <div class="artist d-flex flex-column w-25">
-            <label for="">Artist name</label>
-            <input type="text" required class="artistname" placeholder="Artist name ...">
-           </div>
+            <div class="top w-100 d-flex justify-content-between px-3">
+                <div class="artist d-flex flex-column w-25">
+                    <label for="">Artist name</label>
+                    <input type="text" required class="artistname" placeholder="Artist name ...">
+                </div>
 
-           <div class="addmu d-flex flex-column">
-            <label for="">songname</label>
-            <div class="d-flex">
-            <input type="text" required class="songnameinput" placeholder="songname">
-            <ion-icon type="button" class="fs-2 songnameadd" name="add-circle-outline"></ion-icon>
+                <div class="addmu d-flex flex-column">
+                    <label for="">songname</label>
+                    <div class="d-flex">
+                        <input type="text" required class="songnameinput" placeholder="songname">
+                        <ion-icon type="button" class="fs-2 songnameadd" name="add-circle-outline"></ion-icon>
+                        <select class="styles" name="styles" id="">
+                            <?php
+                            foreach ($data['STYLES'] as $style) {
+                            ?>
+                                <option value="<?php echo $style->__get('styleId') ?>"><?php echo $style->__get('styleName') ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
             </div>
-           </div>
-          </div>
 
 
-          <table class="table border-top border-light mt-3 table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Music</th>
-        <th scope="col">Artist</th>
-    </tr>
-  </thead>
-  <tbody class="tablebody">
+            <table class="table border-top border-light mt-3 table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Music</th>
+                        <th scope="col">Artist</th>
+                    </tr>
+                </thead>
+                <tbody class="tablebody">
 
-    
-   
-  </tbody>
-</table>
+                    <button class="log">LOG</button>
 
-<button class="btn btn-light position-absolute btn-last" style="bottom:1rem;right:1rem">SEND</button>
+
+
+                </tbody>
+            </table>
+
+            <button class="btn btn-light position-absolute btn-last" style="bottom:1rem;right:1rem">SEND</button>
         </div>
     </section>
 

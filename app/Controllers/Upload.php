@@ -1,8 +1,10 @@
 <?php
 
 class Upload extends Controller {
-    public function index () {
-        $this->view('Upload/index');
+    public function index() {
+        $Style = $this->model('Style');
+        $ALLSTYLES = $Style->getallstyles();
+        $this->view('Upload/index', $data = ['STYLES' => $ALLSTYLES]);
     }
 
     public function addmusic() {
@@ -27,7 +29,12 @@ class Upload extends Controller {
 
 
             foreach($songs as $music) {
-                    $Musics->__set('songName', $music);
+
+                $songName = $music['songName'] ?? '';
+                $style = $music['style'] ?? '';
+
+                    $Musics->__set('songName', $songName);
+                    $Musics->__set('styleId',$style);
                     $Musics->__set('albumId',$lastid);
                     $Musics->insertMusic();
                 }

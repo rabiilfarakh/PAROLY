@@ -6,6 +6,7 @@ class Album {
     private $artistId;
     private $albumImage;
 
+    private $artistName;
     private $db;
 
     public function __construct() {
@@ -32,5 +33,29 @@ class Album {
     public function lastInsertedId() {
         return $this->db->lastInsertId();
     }
+
+    public function Get_ALL_ALbums() {
+        $get = $this->db->query('SELECT * FROM album JOIN artist ON artist.artistId = album.artistId');
+        $result = $get->fetchAll(PDO::FETCH_ASSOC);
+        $albums = [];
+
+        foreach ($result as $row) {
+            $album = new Album();
+            $album->__set('albumId', $row['albumId']);
+            $album->__set('albumName', $row['albumName']);
+            $album->__set('artistId', $row['artistId']);
+
+            $album->__set('artistName', $row['artistName']);
+
+            $imageData = base64_encode($row['albumImage']); 
+            $album->__set('albumImage', $imageData);
+
+            $albums[] = $album;
+        }
+
+        return $albums;
+    }
+
+
     
 }
