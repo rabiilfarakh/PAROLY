@@ -3,10 +3,16 @@
 namespace App\Controllers;
 use App\Core\Controller;
 use App\Helpers\Functions;
+use App\Models\Style;
 class Admins extends Controller
 {
+
+    
+  
     public function login()
     {
+        ob_start();
+
         $this->view("Authentication/login");
         if (isset($_POST['login'])) {
             $clientObject = $this->model("Admin");
@@ -16,10 +22,11 @@ class Admins extends Controller
             } else if ($result == 1) {
                 echo "incorrect password ";
             } else {
-                header("Location: ". APP_URL . "public/Admin/dashboard");
+                header("Location: ". APP_URL . "public/Admins/dashboard");
             }
         }
     }
+
     public function dashboard (){
         $this->view("Admin/dashboard");
     }
@@ -29,20 +36,34 @@ class Admins extends Controller
     public function lyrics (){
         $this->view("Admin/lyrics");
     }
-    public function style (){
+    public function styles (){
         $this->view("Admin/style");
-        if(isset($_POST["addStyle"])){
-            unset($_POST["addStyle"]);
-          $styleObject = $this->model("Style");
-          die("here");
-          $styleObject->addStyle($_POST);
-          
-        }
     }
-    public function Add(){
-        $this->view("Admin/addStyle");
+   
+    public function addstyle(){
+
+        $style = new Style();
+        if($_SERVER["REQUEST_METHOD"] == "POST" ){
+            $Name = $_POST["styleName"];
+                       $newstyle = new Style();
+                       $newstyle->styleName = $Name ;
+                       
+                       $style->addstyle($newstyle);
+                        header("Location:".APP_URL."public/admins/style");
+
+                    }
+        
+        $this->view("admin/addstyle");
     }
 
+    public function style()
+    {
+        $style = new Style();
+        $styles = $style->displayStyle();
+        $data = ["style" => $styles];
+        $this->view("admin/style", $data);
+    }
+  
     public function reclamations (){
         $this->view("Admin/reclamations");
     }
