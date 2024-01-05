@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75f72f87-b0a5-4069-85fc-9962c7257a89" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Playlists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Playlists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Styles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Styles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/InputsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/InputsManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Artist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Music.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Music.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Style.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/admin/addPlaylist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/addPlaylist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/admin/addstyle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/addstyle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/Client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/Client/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/artist/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/artist/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "aymane",
+    "git-widget-placeholder": "rabii",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -67,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704448975545</updated>
       <workItem from="1704448983617" duration="11202000" />
+      <workItem from="1704482243897" duration="1474000" />
     </task>
     <servers />
   </component>
