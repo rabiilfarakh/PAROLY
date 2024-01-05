@@ -51,4 +51,28 @@ class Music {
         $insert->bindValue(':style' ,$style ,PDO::PARAM_INT);
         $insert->execute();
     }
+
+
+    public function GEt_Music_By_Album () {
+        $albumid = $this->albumId;
+        $get = $this->db->prepare('SELECT * FROM music WHERE albumId = :id');
+        $get->bindValue(':id' , $albumid , PDO::PARAM_INT);
+        $get->execute();
+        $result = $get->fetchAll(PDO::FETCH_ASSOC);
+        $songs = [];
+    
+        foreach ($result as $row) {
+            $music = new Music();
+            $music->__set('songId', $row['songId']);
+            $music->__set('songName', $row['songName']);
+            $music->__set('createAt', $row['createAt']);
+            $music->__set('albumId', $row['albumId']);
+            $music->__set('styleId', $row['styleId']);
+    
+            $songs[] = $music;
+        }
+        
+        return $songs;
+    }
+    
 }

@@ -86,4 +86,39 @@ nav {
     word-break: break-all; 
 }
 
+.modal-content {
+    background-position: center;
+    background-size: cover;
+}
 
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #121212d2;
+    z-index: 1;
+}
+.modalbody {
+    z-index: 2;
+}
+
+.table{
+    --bs-table-bg:transparent !important;
+}
+.table th{
+    color: rgb(87, 87, 87) !important;
+}
+
+.table td {
+    color: white !important;
+}
+
+.table thead {
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+.table .sg:hover {
+    background-color: #242424 !important;
+    cursor: pointer;
+}

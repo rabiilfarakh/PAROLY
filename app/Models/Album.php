@@ -9,6 +9,8 @@ class Album {
     private $artistName;
     private $db;
 
+    private $SONGSCOUNT;
+
     public function __construct() {
         $this->db = DATABASE::getconnection();
     }
@@ -35,17 +37,24 @@ class Album {
     }
 
     public function Get_ALL_ALbums() {
-        $get = $this->db->query('SELECT * FROM album JOIN artist ON artist.artistId = album.artistId');
+        $get = $this->db->query('SELECT album.*,artist.artistName, COUNT(music.songId) AS SONGSCOUNT
+        FROM album
+        JOIN artist ON artist.artistId = album.artistId
+        JOIN music ON music.albumId = album.albumId
+        GROUP BY album.albumId;');
         $result = $get->fetchAll(PDO::FETCH_ASSOC);
         $albums = [];
 
         foreach ($result as $row) {
             $album = new Album();
             $album->__set('albumId', $row['albumId']);
+
             $album->__set('albumName', $row['albumName']);
             $album->__set('artistId', $row['artistId']);
 
             $album->__set('artistName', $row['artistName']);
+
+            $album->__set('SONGSCOUNT' , $row['SONGSCOUNT']);
 
             $imageData = base64_encode($row['albumImage']); 
             $album->__set('albumImage', $imageData);
