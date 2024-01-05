@@ -19,27 +19,34 @@ class Clients extends Controller
 
     public function login()
     {
-        $this->view("Authentication/login");
-        if (isset($_POST['submit'])) {
+        $this->view("client/login");
+
+    }
+
+    public function checkLogin(){
+        if (isset($_POST['login'])) {
+            
             $clientObject = $this->model("Client");
-            $result = $clientObject->Login($_POST['username'], $_POST['password']);
+            $result = $clientObject->lg($_POST['email'], $_POST['password']);
             if ($result == 0) {
                 echo "user not found";
             } else if ($result == 1) {
+                
                 echo "incorrect password ";
             } else {
-                $this->view("Client/index");
+                $this->view("client/index");
             }
 
         }
     }
 
 
+
     public function newPwd()
     {
-        $this->view("Authentication/newPwd");
+        $this->view("client/resetPwd");
 
-        if (isset($_POST['newPwd'])) {
+        if (isset($_POST['confirme'])) {
             $token = $_GET["token"];
             $email = $_GET["email"];
         
@@ -68,7 +75,7 @@ class Clients extends Controller
 
     public function forgotPwd(){
         
-        $this->view("Authentication/forgotPwd");
+        $this->view("client/forgotPwd");
 
         require 'C:/laragon/www/PHPMailer/src/Exception.php';
         require 'C:/laragon/www/PHPMailer/src/PHPMailer.php';

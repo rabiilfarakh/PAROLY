@@ -20,10 +20,10 @@
         <div class="nav-links">
             <ul class="nav-list flex gap-4">
                 <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
-                    <a href="#" class="nav-link">S'inscrire</a>
+                    <a href="users/register" class="nav-link">S'inscrire</a>
                 </li>
                 <li class="nav-item hover:bg-[#E2B714] hover:shadow-lg py-2 px-4  rounded-3xl">
-                    <a href="#" class="nav-link">Se connecter</a>
+                    <a href="clients/login" class="nav-link">Se connecter</a>
                 </li>
                 <li class="">
                     <div class="dropdown">

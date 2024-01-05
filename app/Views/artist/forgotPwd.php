@@ -10,20 +10,14 @@
 </head>
 <body>
   <section class="register d-flex justify-content-center align-items-center">
-    <form method ="POST" action="checkLogin"> 
+    <form method ="POST"> 
         
-      <h1 class="text-center">LOGIN</h1>
+      <h1 class="text-center">Email</h1>
       <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
+        <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email">
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password">
-      </div>
-      <p class="text-center">Creat an account?<a href="/PAROLY/public/users/register">signup</a></p>
-      <p class="text-center"><a href="forgotPwd">password oublié</a></p>
-      <button class="btn btn-primary w-100" id="sign-up" name="login">login</button>
+      <button class="btn btn-primary w-100" id="sign-up" name="reset">Envoyer</button>
     </form>
   </section>
 

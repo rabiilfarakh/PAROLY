@@ -1,22 +1,34 @@
 <?php
 
 namespace App\Core;
-
+use PDO;
 use App\Core\Database;
 use PDOException;
 
 abstract class Model
 {
+    
     private $tableName;
     private $columns = ["*"];
     private $dbh;
 
-    public function __construct($tableName)
-    {
-        $this->dbh = Database::getInstance();
-        $this->dbh = $this->dbh->connect();
-        $this->tableName = $tableName;
+
+
+
+    public function __construct()
+{
+    $dsn = "mysql:host=localhost;dbname=paroly";
+    $username = "root";
+    $password = "167200216";
+
+    try {
+        $this->dbh = new PDO($dsn, $username, $password);
+        $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
     }
+}
+
     public function __set($property, $value)
     {
         $this->$property = $value;
@@ -26,7 +38,7 @@ abstract class Model
     {
         return $this->$property;
     }
-
+ 
     protected function getAll()
     {
         try {
@@ -84,4 +96,6 @@ abstract class Model
             die("error in deleting" . $e->getMessage());
         }
     }
+
+
 }

@@ -1,28 +1,40 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Core\Controller;
+use App\Core\Database;
 use PDO;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 class Artists extends Controller
 {
-
     private $db;
+
+    public function __construct()
+    { 
+        $this->db = new PDO('mysql:host=localhost;dbname=paroly', 'root', '167200216');
+    }
 
     public function login()
     {
-        $this->view("Authentication/login");
-        if (isset($_POST['submit'])) {
-            $clientObject = $this->model("Artist");
+        $this->view("artist/login");
 
-            $result = $clientObject->Login($_POST['username'], $_POST['password']);
+    }
+
+    public function checkLogin(){
+        if (isset($_POST['login'])) {
+            
+            $clientObject = $this->model("artist");
+            $result = $clientObject->lg($_POST['email'], $_POST['password']);
             if ($result == 0) {
                 echo "user not found";
             } else if ($result == 1) {
+                
                 echo "incorrect password ";
             } else {
-                print_r($result);
+                $this->view("artist/index");
             }
 
         }
@@ -32,7 +44,7 @@ class Artists extends Controller
 
     public function newPwd()
     {
-        $this->view("Authentication/newPwd");
+        $this->view("artist/resetPwd");
 
         if (isset($_POST['newPwd'])) {
             $token = $_GET["token"];
@@ -63,7 +75,7 @@ class Artists extends Controller
 
     public function forgotPwd(){
         
-        $this->view("Authentication/forgotPwd");
+        $this->view("artist/forgotPwd");
 
         require 'C:/laragon/www/PHPMailer/src/Exception.php';
         require 'C:/laragon/www/PHPMailer/src/PHPMailer.php';
