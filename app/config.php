@@ -12,4 +12,3 @@ define ("DB_NAME", 'paroly');
 define ("APP_ROOT",  dirname(dirname(__FILE__)));
 define ("APP_URL", "http://localhost/paroly/");
 define ("SITE_NAME", 'PAROLY');
-

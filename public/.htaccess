@@ -1,7 +1,7 @@
-Options -MultiViews
+Options -Multiviews
 RewriteEngine On
 
-RewriteBase /PAROLY/public
+RewriteBase /paroly/public
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

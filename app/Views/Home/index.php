@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php require_once APP_ROOT . '/Views/components/header.php'; ?>
 
 <section class="container mx-auto text-white">
@@ -107,3 +108,16 @@
 </section>
 
 <?php require_once APP_ROOT . '/Views/components/footer.php'; ?>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="Artist">TO ARTIST</a></button>
+</body>
+</html>
+>>>>>>> f06f4296c981915c37b7421dee40808520c1e4ec
