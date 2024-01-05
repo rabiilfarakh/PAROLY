@@ -1,1 +1,1 @@
-client page
+artist page

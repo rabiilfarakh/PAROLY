@@ -31,19 +31,7 @@ abstract class User extends Model
         $this->dbh = $this->dbh->connect();
 }
 
-    public function lg($email,$pwd){
-        try {
-            
-            $query = "SELECT * FROM client WHERE email = :email AND password = :pwd";
-            $stmt = $this->dbh->prepare($query);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':pwd', $pwd);
-            $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $ex) {
-            die("error in finding by a column" . $ex->getMessage());
-        }
-    }
+
 
     public function Login($email, $password){
         $result = $this->findByColumnName("email", $email);

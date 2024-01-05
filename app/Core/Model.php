@@ -16,6 +16,8 @@ abstract class Model
         $this->dbh = Database::getInstance();
         $this->dbh = $this->dbh->connect();
         $this->tableName = $tableName;
+
+        
     }
     public function __set($property, $value)
     {
@@ -54,8 +56,8 @@ abstract class Model
         try{
             $columns = implode(',', array_keys($data));
             $placeholders = implode(',', array_fill(0, count($data), '?'));
-
-            $stmt = $this->dbh->prepare("INSERT INTO {$this->tableName} ({$columns}) values ($placeholders)");
+            
+            $stmt = $this->dbh->prepare("INSERT INTO {$this->tableName} ($columns) values ($placeholders)");
             $stmt->execute(array_values($data));
         }catch(PDOException $e){
             die("error in selecting" . $e->getMessage());

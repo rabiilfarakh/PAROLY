@@ -20,8 +20,8 @@ class Artists extends Controller
     public function checkLogin(){
         if (isset($_POST['login'])) {
             
-            $clientObject = $this->model("artist");
-            $result = $clientObject->lg($_POST['email'], $_POST['password']);
+            $artistObject = $this->model("artist");
+            $result = $artistObject->lg($_POST['email'], $_POST['password']);
             if ($result == 0) {
                 echo "user not found";
             } else if ($result == 1) {
@@ -40,7 +40,7 @@ class Artists extends Controller
     {
         $this->view("artist/resetPwd");
 
-        if (isset($_POST['newPwd'])) {
+        if (isset($_POST['confirme'])) {
             $token = $_GET["token"];
             $email = $_GET["email"];
         
@@ -87,6 +87,7 @@ class Artists extends Controller
         if (isset($_POST['reset'])) {
             $email = $_POST["email"];
 
+            $object = $this->model("Artist");
             $user = $object->newPwd($email);
             // $stmt = $this->db->prepare("SELECT userId FROM artist WHERE email = ?");
             // $stmt->execute([$email]);
@@ -128,3 +129,4 @@ class Artists extends Controller
 
     }
 }
+

@@ -5,17 +5,13 @@ namespace App\Controllers;
 use App\Core\Controller;
 use App\Core\Database;
 use PDO;
+use PDOException;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 class Clients extends Controller
 {
-    private $db;
-
-    public function __construct()
-    { 
-        $this->db = new PDO('mysql:host=localhost;dbname=paroly', 'root', '167200216');
-    }
+    private $dbh;
 
     public function login()
     {
@@ -26,7 +22,7 @@ class Clients extends Controller
     public function checkLogin(){
         if (isset($_POST['login'])) {
             
-            $clientObject = $this->model("Client");
+            $clientObject = $this->model("client");
             $result = $clientObject->lg($_POST['email'], $_POST['password']);
             if ($result == 0) {
                 echo "user not found";
@@ -41,7 +37,6 @@ class Clients extends Controller
     }
 
 
-
     public function newPwd()
     {
         $this->view("client/resetPwd");
@@ -52,15 +47,24 @@ class Clients extends Controller
         
             $password = $_POST["password"];
             $tryPassword = $_POST["tryPassword"];
-        
-            $stmt = $this->db->prepare("SELECT userId , token FROM client WHERE email = ?");
-            $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            $object = $this->model("client");
+            $user = $object->newPwd($email);
+
+            // $stmt = $this->dbh->prepare("SELECT userId , token FROM client WHERE email = ?");
+            // $stmt->execute([$email]);
+            // $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
         
             if ($user && $user['token'] == $token) {
                 if ($password == $tryPassword) {
-                    $stmt = $this->db->prepare("UPDATE client SET password = ? WHERE userId = ?");
-                    $stmt->execute([$password, $user['userId']]);
+                    
+
+                    $user = $object->up($password,$user['userId']);
+
+                    // $stmt = $this->db->prepare("UPDATE client SET password = ? WHERE userId = ?");
+                    // $stmt->execute([$password, $user['userId']]);
+
                     header('location:http://localhost/PAROLY/public/clients/login');
                     exit();
                 } else {
@@ -73,6 +77,8 @@ class Clients extends Controller
 
     }
 
+
+
     public function forgotPwd(){
         
         $this->view("client/forgotPwd");
@@ -83,10 +89,12 @@ class Clients extends Controller
 
         if (isset($_POST['reset'])) {
             $email = $_POST["email"];
-
-            $stmt = $this->db->prepare("SELECT userId FROM client WHERE email = ?");
-            $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            $object = $this->model("client");
+            $user = $object->newPwd($email);
+            // $stmt = $this->db->prepare("SELECT userId FROM client WHERE email = ?");
+            // $stmt->execute([$email]);
+            // $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
                 $code = uniqid();
@@ -109,9 +117,9 @@ class Clients extends Controller
                     // $mail->SMTPDebug = 2;
 
                     $mail->send();
-
-                    $stmt = $this->db->prepare("UPDATE client SET token = ? WHERE userId = ?");
-                    $stmt->execute([$code, $user['userId']]);
+                    $user = $object->upT($code,$user['userId']);
+                    // $stmt = $this->db->prepare("UPDATE client SET token = ? WHERE userId = ?");
+                    // $stmt->execute([$code, $user['userId']]);
 
                     echo "Un code de récupération a été envoyé à votre adresse e-mail.";
                 } catch (Exception $e) {
@@ -124,3 +132,4 @@ class Clients extends Controller
 
     }
 }
+
