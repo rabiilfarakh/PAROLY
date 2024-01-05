@@ -4,25 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="" />
+=======
+    <list default="true" id="75f72f87-b0a5-4069-85fc-9962c7257a89" name="Changes" comment="finish">
+      <change afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Controllers/Upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Views/Upload/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/artist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/Upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MVC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Artists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Style.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/Client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/Client/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/sqlScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/sqlScript.sql" afterDir="false" />
+    </list>
+>>>>>>> 55076dbfc5e0d351e49dae4fcff4b92ca06c5a8a
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,8 +64,12 @@
       </RecentBranches>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectId" id="2aGFeMMWg9lczq4ZDxDNQy3AM5h" />
+=======
+  <component name="ProjectId" id="2aWz9cLF36jm9IDZdoPW8bM4rLP" />
+>>>>>>> 55076dbfc5e0d351e49dae4fcff4b92ca06c5a8a
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -62,6 +78,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -96,13 +113,29 @@
       <recent name="C:\xampp\htdocs\PAROLY\App\Views\Authentication" />
     </key>
   </component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging last",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+>>>>>>> 55076dbfc5e0d351e49dae4fcff4b92ca06c5a8a
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="" />
-      <created>1703937102763</created>
+      <changelist id="75f72f87-b0a5-4069-85fc-9962c7257a89" name="Changes" comment="" />
+      <created>1704448975545</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1703937102763</updated>
       <workItem from="1703937104147" duration="517000" />
       <workItem from="1703937641681" duration="10114000" />
@@ -117,10 +150,18 @@
       <workItem from="1704399332350" duration="4595000" />
       <workItem from="1704407166479" duration="3862000" />
       <workItem from="1704442200345" duration="2098000" />
+=======
+      <updated>1704448975545</updated>
+      <workItem from="1704448983617" duration="11202000" />
+>>>>>>> 55076dbfc5e0d351e49dae4fcff4b92ca06c5a8a
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
 </project>

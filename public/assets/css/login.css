@@ -1,0 +1,88 @@
+body {
+    min-height: 100vh;
+    background: rgb(15, 13, 19);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0; 
+}
+
+form {
+    width: 28rem !important; 
+    padding: 1.25rem; 
+}
+
+form label {
+    color: white;
+}
+
+form input {
+    border: 2px solid transparent;
+    background: #29282D;
+    border-radius: 0.625rem;
+    padding: 0.7rem 1rem;
+    outline: none !important;
+    transition: border-color 0.3s ease;
+    color: white;
+}
+
+form input:hover {
+    background: rgba(255, 255, 255, 0.137);
+}
+
+form input:focus {
+    border: 2px solid orange;
+    background: #29282D;
+    color: white;
+}
+
+form h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: orange;
+}
+
+form-control {
+    box-shadow: none !important;
+    background: #29282D;
+}
+
+#sign-up {
+    background: rgba(255, 166, 0, 0.863);
+    color: white;
+    border-radius: 0.625rem;
+}
+
+#sign-up:hover {
+    background-color: orange;
+}
+
+
+#accounttype {
+    color: white !important;
+    background: #29282D !important;
+    border: none;
+    outline: none;
+    width: 60%; 
+    margin: 0.625rem 0; 
+    float: left;
+}
+
+footer {
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    background: url(../assets/IMGS/man-singing-on-stage.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.gradiant {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
