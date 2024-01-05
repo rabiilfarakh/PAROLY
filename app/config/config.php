@@ -4,7 +4,7 @@
 // ************************************//
 define ("DB_HOST", 'localhost');
 define ("DB_USER", 'root');
-define ("DB_PASSWORD", '167200216');
+define ("DB_PASSWORD", '');
 define ("DB_NAME", 'paroly');
 // **************************************//
 // ****** website CONFIGURATION ****** //
