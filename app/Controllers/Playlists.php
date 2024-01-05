@@ -13,9 +13,11 @@ class Playlists extends Controller{
             $this->getPlaylists(),
             $this->getStyles()
             ];
+//        Functions ::dd($this->statistics());
         $this->view("Admin/dashboard", $data);
     }
     public function addPlaylist(){
+        ob_start();
         $playlist = $this->model("Playlist");
         $this->view("admin/addPlaylist");
         if(isset($_POST['addplaylist'])){
@@ -23,11 +25,23 @@ class Playlists extends Controller{
             $_POST['userId'] = $_SESSION["user"]["userId"];
             $playlistInfo = Validator::playlistInfo($_POST, $_FILES["playlistImage"]);
             $playlist->addPlaylist($playlistInfo);
+            header("Location: " . APP_URL . "public/Playlists");
         }
     }
     public function statistics(){
         $object = $this->model("playlist");
-        return $object->statistics();
+        $playlistCount = $object->statistics();
+        $object = $this->model("style");
+        $styleCount = $object->statistics();
+        $object = $this->model("Artist");
+        $artistCount = $object->statistics();
+        $object = $this->model("client");
+        $clientCount = $object->statistics();
+        return ["playlistCount" => $playlistCount[0],
+            "styleCount" => $styleCount[0],
+            "artistCount" => $artistCount[0],
+            "clientCount" => $clientCount[0]
+        ];
     }
     public function getPlaylists(){
         $object = $this->model("playlist");

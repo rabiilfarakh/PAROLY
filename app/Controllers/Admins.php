@@ -47,20 +47,20 @@ class Admins extends Controller
         $this->view("Admin/style");
     }
 
-    public function addstyle()
-    {
-        $style = $this->model("Style");
-//        $style = new Style();
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $Name = $_POST["styleName"];
-            $newstyle = new Style();
-            $newstyle->styleName = $Name;
-            $style->addstyle($newstyle);
-            header("Location:" . APP_URL . "public/admins/style");
-
-        }
-        $this->view("admin/addstyle");
-    }
+//    public function addstyle()
+//    {
+//        $style = $this->model("Style");
+////        $style = new Style();
+//        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//            $Name = $_POST["styleName"];
+//            $newstyle = new Style();
+//            $newstyle->styleName = $Name;
+//            $style->addstyle($newstyle);
+//            header("Location:" . APP_URL . "public/admins/style");
+//
+//        }
+//        $this->view("admin/addstyle");
+//    }
 
     public function style()
     {

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Helpers;
+use App\Helpers\Functions;
 
 class InputsManager
 {
@@ -36,6 +37,7 @@ class InputsManager
 
     public static function playlistInfo($data, $file)
     {
+
         $errors = [];
         foreach ($data as $key => $value) {
             if (empty($value)) {
