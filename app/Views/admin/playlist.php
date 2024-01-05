@@ -11,9 +11,10 @@
    </style>
 </head>
 
-<body class="bg-gray-950">
+<body class="bg-gray-950 grid">
+<div class="grid-cols-6">
 
-   <nav class="fixed top-0 z-50 w-full bg-black ">
+   <nav class="fixed top-0 z-50 w-full bg-black col-span-6">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
          <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -60,7 +61,7 @@
       </div>
    </nav>
 
-   <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-gray-300 border-r border-gray-200 sm:translate-x-0 dark:bg-gray-900 dark:border-gray-700" aria-label="Sidebar">
+   <aside id="logo-sidebar" class="col-span-1 fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-gray-300 border-r border-gray-200 sm:translate-x-0 dark:bg-gray-900 dark:border-gray-700" aria-label="Sidebar">
       <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-300 dark:bg-gray-900">
          <ul class="space-y-2 font-medium">
             <li>
@@ -122,8 +123,11 @@
                   <span class="flex-1 ms-3 whitespace-nowrap">Sign out</span>
                </a>
             </li>
-
-            </li>
          </ul>
       </div>
    </aside>
+
+    <main class="col-span-5 m-64">
+        <a href="../playlists/addPlaylist" class="addPlaylist bg-white p-4 rounded-xl">add playlist</a>
+    </main>
+</div>

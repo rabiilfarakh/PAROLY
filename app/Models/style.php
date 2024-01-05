@@ -38,7 +38,6 @@ class Style extends Model
         $result->bindParam(":styleName" , $styleName);
         $result->execute();
     }
-
     public function displayStyle(){
         $conn = $this->dbh;
         $query = "SELECT * FROM style";

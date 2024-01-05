@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Views/Client/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Views/components/clientSidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Playlists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Playlists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/InputsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/InputsManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/sqlScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/sqlScript.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;aymane&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/PAROLY/Public/assets/img&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -100,6 +98,8 @@
       <workItem from="1704224673333" duration="3111000" />
       <workItem from="1704271590345" duration="18665000" />
       <workItem from="1704308719886" duration="2032000" />
+      <workItem from="1704399332350" duration="4595000" />
+      <workItem from="1704407166479" duration="3862000" />
     </task>
     <servers />
   </component>
