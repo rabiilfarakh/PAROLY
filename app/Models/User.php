@@ -5,6 +5,7 @@ use PDO;
 use PDOException;
 use App\Core\Model;
 use App\Helpers\Functions;
+use App\Core\Database;
 abstract class User extends Model
 {
     private $userId;
@@ -14,7 +15,7 @@ abstract class User extends Model
     private $password;
     private $profileImage;
     private $token;
-    private $db;
+    private $dbh;
     
     public function __set($property, $value){
         $this->$property = $value;
@@ -24,16 +25,17 @@ abstract class User extends Model
     }
    
 
-    public function __construct()
-    { 
-        $this->db = new PDO('mysql:host=localhost;dbname=paroly', 'root', '167200216');
-    }
+    public function __construct (){
+
+        $this->dbh = Database::getInstance();
+        $this->dbh = $this->dbh->connect();
+}
 
     public function lg($email,$pwd){
         try {
             
             $query = "SELECT * FROM client WHERE email = :email AND password = :pwd";
-            $stmt = $this->db->prepare($query);
+            $stmt = $this->dbh->prepare($query);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':pwd', $pwd);
             $stmt->execute();
@@ -42,8 +44,6 @@ abstract class User extends Model
             die("error in finding by a column" . $ex->getMessage());
         }
     }
-
-
 
     public function Login($email, $password){
         $result = $this->findByColumnName("email", $email);

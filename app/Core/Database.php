@@ -18,12 +18,13 @@ class Database
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         );
-        $this->conn = new PDO ($dsn, $this->user, $this->password, $options);
+        $this->dbh = new PDO($dsn, $this->user, $this->password, $options);
+
     }
     public static function getInstance()
     {
         if (self::$instance === null) { self::$instance = new Database; }
         return self::$instance;
     }
-    public function connect() { return $this->conn; }
+    public function connect() { return $this->dbh; }
 }

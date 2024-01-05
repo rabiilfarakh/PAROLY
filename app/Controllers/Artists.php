@@ -10,12 +10,6 @@ use PHPMailer\PHPMailer\Exception;
 
 class Artists extends Controller
 {
-    private $db;
-
-    public function __construct()
-    { 
-        $this->db = new PDO('mysql:host=localhost;dbname=paroly', 'root', '167200216');
-    }
 
     public function login()
     {
@@ -52,15 +46,24 @@ class Artists extends Controller
         
             $password = $_POST["password"];
             $tryPassword = $_POST["tryPassword"];
-        
-            $stmt = $this->db->prepare("SELECT userId , token FROM artist WHERE email = ?");
-            $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            $object = $this->model("Artist");
+            $user = $object->newPwd($email);
+
+            // $stmt = $this->dbh->prepare("SELECT userId , token FROM artist WHERE email = ?");
+            // $stmt->execute([$email]);
+            // $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
         
             if ($user && $user['token'] == $token) {
                 if ($password == $tryPassword) {
-                    $stmt = $this->db->prepare("UPDATE artist SET password = ? WHERE userId = ?");
-                    $stmt->execute([$password, $user['userId']]);
+                    
+
+                    $user = $object->up($password,$user['userId']);
+
+                    // $stmt = $this->db->prepare("UPDATE artist SET password = ? WHERE userId = ?");
+                    // $stmt->execute([$password, $user['userId']]);
+
                     header('location:http://localhost/PAROLY/public/artists/login');
                     exit();
                 } else {
@@ -84,9 +87,10 @@ class Artists extends Controller
         if (isset($_POST['reset'])) {
             $email = $_POST["email"];
 
-            $stmt = $this->db->prepare("SELECT userId FROM artist WHERE email = ?");
-            $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user = $object->newPwd($email);
+            // $stmt = $this->db->prepare("SELECT userId FROM artist WHERE email = ?");
+            // $stmt->execute([$email]);
+            // $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
                 $code = uniqid();
@@ -109,9 +113,9 @@ class Artists extends Controller
                     // $mail->SMTPDebug = 2;
 
                     $mail->send();
-
-                    $stmt = $this->db->prepare("UPDATE artist SET token = ? WHERE userId = ?");
-                    $stmt->execute([$code, $user['userId']]);
+                    $user = $object->upT($code,$user['userId']);
+                    // $stmt = $this->db->prepare("UPDATE artist SET token = ? WHERE userId = ?");
+                    // $stmt->execute([$code, $user['userId']]);
 
                     echo "Un code de récupération a été envoyé à votre adresse e-mail.";
                 } catch (Exception $e) {
