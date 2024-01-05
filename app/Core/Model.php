@@ -84,4 +84,13 @@ abstract class Model
             die("error in deleting" . $e->getMessage());
         }
     }
+    protected function count ($column){
+        try  {
+            $stmt = $this->dbh->prepare("SELECT count($column) FROM {$this->tableName} as count");
+            $stmt->execute();
+            return $stmt->fetch();
+        }catch (PDOException $e){
+            die("error in deleting" . $e->getMessage());
+        }
+    }
 }

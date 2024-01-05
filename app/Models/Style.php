@@ -46,6 +46,9 @@ class Style extends Model
         $styles = $result->fetchAll(PDO::FETCH_OBJ);  
         return $styles;
     }
+    public function getStyles(){
+        return $this->getAll();
+    }
     
     
 }

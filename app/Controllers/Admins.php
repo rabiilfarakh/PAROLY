@@ -33,8 +33,7 @@ class Admins extends Controller
         }
     }
 
-
-    public function dashboard()
+    public function index()
     {
         $this->view("Admin/dashboard");
     }
@@ -105,9 +104,5 @@ class Admins extends Controller
         $this->view("Admin/reclamations");
     }
 
-    public function playlist()
-    {
-        $this->view("Admin/playlist");
-    }
 
 }

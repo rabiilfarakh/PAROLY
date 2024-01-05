@@ -18,7 +18,13 @@ class Playlist extends Model
     public function __get ($property){
         return $this->$property;
     }
+    public function getAllPlaylists(){
+        return $this->getAll();
+    }
     public function addplaylist($data){
         $this->add($data);
+    }
+    public function statistics (){
+        return $this->count('playlistId');
     }
 }
