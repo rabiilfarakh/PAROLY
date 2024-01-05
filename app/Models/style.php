@@ -10,6 +10,7 @@ class Style extends Model
 {
     private $styleId;
     private $styleName;
+    private $dbh;
     public function __construct(){
         parent::__construct("style");
         $this->dbh = Database::getInstance();
