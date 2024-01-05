@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Controllers;
+session_start();
+
 use App\Core\Controller;
 use App\Helpers\Functions;
 use App\Models\Style;
+
 class Admins extends Controller
 {
-
-    
-  
     public function login()
     {
         ob_start();
@@ -22,37 +22,43 @@ class Admins extends Controller
             } else if ($result == 1) {
                 echo "incorrect password ";
             } else {
-                header("Location: ". APP_URL . "public/Admins/dashboard");
+                $_SESSION["user"] = $result;
+                header("Location: " . APP_URL . "public/Admins/dashboard");
             }
         }
     }
 
-    public function dashboard (){
+    public function dashboard()
+    {
         $this->view("Admin/dashboard");
     }
-    public function calendrier (){
+    public function calendrier()
+    {
         $this->view("Admin/calendrier");
     }
-    public function lyrics (){
+
+    public function lyrics()
+    {
         $this->view("Admin/lyrics");
     }
-    public function styles (){
+
+    public function styles()
+    {
         $this->view("Admin/style");
     }
-   
-    public function addstyle(){
+
+    public function addstyle()
+    {
         $style = $this->model("Style");
 //        $style = new Style();
-        if($_SERVER["REQUEST_METHOD"] == "POST" ){
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $Name = $_POST["styleName"];
-                       $newstyle = new Style();
-                       $newstyle->styleName = $Name ;
-                       
-                       $style->addstyle($newstyle);
-                        header("Location:".APP_URL."public/admins/style");
+            $newstyle = new Style();
+            $newstyle->styleName = $Name;
+            $style->addstyle($newstyle);
+            header("Location:" . APP_URL . "public/admins/style");
 
-                    }
-        
+        }
         $this->view("admin/addstyle");
     }
 
@@ -63,11 +69,14 @@ class Admins extends Controller
         $data = ["style" => $styles];
         $this->view("admin/style", $data);
     }
-  
-    public function reclamations (){
+
+    public function reclamations()
+    {
         $this->view("Admin/reclamations");
     }
-    public function playlist (){
+
+    public function playlist()
+    {
         $this->view("Admin/playlist");
     }
 

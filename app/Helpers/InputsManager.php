@@ -33,6 +33,7 @@ class InputsManager
             return $errors;
         }
     }
+
     public static function playlistInfo($data, $file)
     {
         $errors = [];
@@ -49,6 +50,7 @@ class InputsManager
             return [
                 "playlistName" => $data["playlistName"],
                 "playlistDescription" => $data["playlistDescription"],
+                "userId" => $data["userId"],
                 "playlistImage" => InputsManager::getImage($file)
             ];
         } else {
