@@ -13,6 +13,16 @@ class Clients extends Controller
 {
     private $dbh;
 
+
+    public function index () {
+        $Musics = $this->model('Music');
+        $ALLSONGS = $Musics->Get_All_Songs();
+        $Albums =$this->model('Album');
+        $ALLALBUMS = $Albums->Get_ALL_ALbums();
+
+        $this->view('Client/index',$data = ['Musics'=>$ALLSONGS , 'Albums' =>$ALLALBUMS]);
+    }
+
     public function login()
     {
         $this->view("client/login");
