@@ -4,25 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="" />
+    <list default="true" id="75f72f87-b0a5-4069-85fc-9962c7257a89" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Playlists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Playlists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Styles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Styles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/InputsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/InputsManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Artist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Music.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Music.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Style.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/admin/addPlaylist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/addPlaylist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/admin/addstyle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/addstyle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/dashboard.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,7 +36,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="2aGFeMMWg9lczq4ZDxDNQy3AM5h" />
+  <component name="ProjectId" id="2aWz9cLF36jm9IDZdoPW8bM4rLP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -41,57 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;aymane&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/PAROLY/Public/assets/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;SQL&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "aymane",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PAROLY\Public\assets\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PAROLY\App\Views\Authentication" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="" />
-      <created>1703937102763</created>
+      <changelist id="75f72f87-b0a5-4069-85fc-9962c7257a89" name="Changes" comment="" />
+      <created>1704448975545</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1703937102763</updated>
-      <workItem from="1703937104147" duration="517000" />
-      <workItem from="1703937641681" duration="10114000" />
-      <workItem from="1703955940075" duration="2557000" />
-      <workItem from="1704030831091" duration="12197000" />
-      <workItem from="1704057257578" duration="14024000" />
-      <workItem from="1704183781145" duration="17464000" />
-      <workItem from="1704221083981" duration="3177000" />
-      <workItem from="1704224673333" duration="3111000" />
-      <workItem from="1704271590345" duration="18665000" />
-      <workItem from="1704308719886" duration="2032000" />
+      <updated>1704448975545</updated>
+      <workItem from="1704448983617" duration="11202000" />
     </task>
     <servers />
   </component>

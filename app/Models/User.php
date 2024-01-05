@@ -37,7 +37,7 @@ abstract class User extends Model
         $result = $this->findByColumnName("email", $email);
         if(count($result) > 0){
             $user = $result[0];
-            if(password_verify($user["password"], $password)){
+            if($password === $user["password"]){
                 return $user;
             }else {
                 return 1;

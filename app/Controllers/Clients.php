@@ -131,5 +131,11 @@ class Clients extends Controller
         }
 
     }
-}
 
+    public function addplaylist(){
+        $this->view('Client/addPlaylist');
+    }
+    public function profile(){
+        $this->view("Authentication/profile");
+    }
+}

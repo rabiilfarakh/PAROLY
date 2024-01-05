@@ -3,6 +3,7 @@
 namespace App\Core;
 
 use App\Core\Database;
+use App\Helpers\Functions;
 use PDOException;
 
 abstract class Model
@@ -55,8 +56,7 @@ abstract class Model
     protected function add($data){
         try{
             $columns = implode(',', array_keys($data));
-            $placeholders = implode(',', array_fill(0, count($data), '?'));
-            
+            $placeholders = implode(',', array_fill(0, count($data), '?'));            
             $stmt = $this->dbh->prepare("INSERT INTO {$this->tableName} ($columns) values ($placeholders)");
             $stmt->execute(array_values($data));
         }catch(PDOException $e){

@@ -11,18 +11,19 @@ class Music extends Model
     private $musicName;
     private $createdAt;
     private Album $album;
-    private $style;
-    private $dbh;
-    public function __construct()
-    {
-        $this->dbh = Database::getInstance();
-        $this->dbh = $this->dbh->connect();
+
+    private Style $style;
+    public function __construct(){
+        parent::__construct("music");
     }
     public function __set($property, $value){
         $this->$property = $value;
     }
     public function __get ($property){
         return $this->$property;
+    }
+    public function getMusic (){
+        return $this->getAll();
     }
 
 }

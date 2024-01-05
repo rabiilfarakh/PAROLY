@@ -28,3 +28,4 @@ class Database
     }
     public function connect() { return $this->dbh; }
 }
+

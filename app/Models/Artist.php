@@ -16,7 +16,6 @@ class Artist extends User
         $this->dbh = Database::getInstance();
         $this->dbh = $this->dbh->connect();
     }
-
     public function lg($email,$pwd){
         try {
             
@@ -53,7 +52,7 @@ class Artist extends User
         }
     }
 
-    
-
-
+    public function statistics(){
+        return $this->count("userId");
+    }
 }

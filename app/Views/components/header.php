@@ -7,7 +7,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?= APP_URL ?>public/assets/css/style.css">
+    <link rel="stylesheet" href="<?= APP_URL ?>public/assets/css/sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <title><?= SITE_NAME ?> | Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -47,8 +51,16 @@
                             <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Users/register">Register</a>
                         </div>
                     </div>
-                </li>
-            </ul>
+
+                </a>
+                <div id="myDropdown" class="dropdown-content flex-col gap-4">
+                    <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Clients/login">Login as Client</a>
+                    <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Admins/login">Become an Artist</a>
+                    <a class="hover:bg-[#E2B714] rounded-xl px-2" href="Users/register">Register</a>
+                    <a class="hover:bg-[#E2B714] rounded-xl px-2" href="profile">Profile</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+

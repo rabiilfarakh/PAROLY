@@ -33,5 +33,5 @@ class Users extends \App\Core\Controller
             $this->view("Authentication/register");
         }
     }
-
 }  
+

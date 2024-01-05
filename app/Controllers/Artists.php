@@ -34,8 +34,6 @@ class Artists extends Controller
         }
     }
 
-
-
     public function newPwd()
     {
         $this->view("artist/resetPwd");
@@ -129,4 +127,3 @@ class Artists extends Controller
 
     }
 }
-

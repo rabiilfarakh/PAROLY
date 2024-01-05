@@ -15,6 +15,9 @@ class Client extends User
         $this->dbh = $this->dbh->connect();
         
     }
+    public function statistics(){
+        return $this->count("userId");
+    }
 
 
 public function lg($email,$pwd){
