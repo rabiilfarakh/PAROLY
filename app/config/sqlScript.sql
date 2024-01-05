@@ -358,6 +358,9 @@ ALTER TABLE `reaction`
 ALTER TABLE `reclamation`
     ADD CONSTRAINT `lyrics_ibfk_1` FOREIGN KEY (`lyricsId`) REFERENCES `lyrics` (`lyricsId`);
 
+use paroly;
+alter table album add column ablumImage longblob;
+
 
 COMMIT;
 

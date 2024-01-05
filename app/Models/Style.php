@@ -31,15 +31,6 @@ class Style extends Model
     public function statistics(){
         return $this->count("styleId");
     }
-//    public function displayStyle(){
-//        $conn = $this->dbh;
-//        $query = "SELECT * FROM style";
-//        $result = $conn->prepare($query);
-//        $result->execute();
-//        $styles = $result->fetchAll(PDO::FETCH_OBJ);
-//        return $styles;
-//    }
-
     
     
 }

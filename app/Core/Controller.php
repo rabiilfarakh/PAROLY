@@ -9,7 +9,7 @@ class Controller
         if (class_exists($modelClass)) {
             return new $modelClass();
         } else {
-            die ("no model class defined with this name");
+            die ("no model class defined with this name" . $model);
         }
     }
     public function view($view, $data = [])

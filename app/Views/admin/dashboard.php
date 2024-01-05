@@ -416,7 +416,7 @@
                     <div class="font-medium">Manage Styles</div>
                     <div class="flex gap-4">
                         <div class="addPlaylist">
-                            <a href="Styles/addStyle" class="bg-blue-700 text-white rounded-lg p-2 font-medium">Add Style</a>
+                            <a href="../Styles/addStyle" class="bg-blue-700 text-white rounded-lg p-2 font-medium">Add Style</a>
                         </div>
                         <div class="dropdown">
                             <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600"><i
@@ -540,7 +540,6 @@
                                 <span class="inline-block p-1 rounded bg-emerald-500/10 text-emerald-500 font-medium text-[12px] leading-none">Pending</span>
                             </td>
                         </tr>
-
                         </tbody>
                     </table>
                 </div>
