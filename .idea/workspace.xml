@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3fde2a-5647-419e-a75f-02664d228202" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Controllers/Styles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MVC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Playlists.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Playlists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Playlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Playlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/style.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Style.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/admin/dashboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "aymane",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/xampp/htdocs/PAROLY/Public/assets/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -107,6 +97,7 @@
       <workItem from="1704308719886" duration="2032000" />
       <workItem from="1704399332350" duration="4595000" />
       <workItem from="1704407166479" duration="3862000" />
+      <workItem from="1704442200345" duration="2098000" />
     </task>
     <servers />
   </component>
